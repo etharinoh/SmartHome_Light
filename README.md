@@ -7,6 +7,7 @@
     * Change brightness (0-100)
 2. Setup bluetooth communication from Google Home
     * https://developers.google.com/assistant/smarthome/develop/seamless-setup
+    * https://wayscript.com/viz/blog/run-python-script-google-assistant-voice-command
 3. Connect each together and use voice commands to alter lighting
 
 ## NOTES
