@@ -51,10 +51,13 @@ async def main(*args):
         args: these will check for predefined commands which can be used and will run the 
 
     """
-    async with BleakClient(LIGHTS_MAC_ADDR) as client:
+    async with BleakClient(LIGHTS_MAC_ADDR) as client: #try except for not found
         print(f"Connected: {client.is_connected}")
         while client.is_connected:
             # Command checking goes here
+            # await client.write_gatt_char(VENDOR_SPEC_C1, ON)
+            # await asyncio.sleep(2)
+            # await cycleColours(client, 4)
             await client.write_gatt_char(VENDOR_SPEC_C1, OFF)
 
         await client.disconnect()
